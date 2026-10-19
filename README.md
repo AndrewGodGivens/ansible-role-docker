@@ -1,3 +1,7 @@
+## Credits
+
+Based on the role by [sorrowless](https://github.com/sorrowless).
+
 # Ansible Role: Docker
 
 [![CI](https://github.com/sorrowless/ansible-role-docker/workflows/CI/badge.svg?event=push)](https://github.com/sorrowless/ansible-role-docker/actions?query=workflow%3ACI)

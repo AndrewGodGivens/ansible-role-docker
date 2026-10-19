@@ -26,8 +26,8 @@ docker_compose_package_state: present
 # Docker Compose options.
 docker_install_compose: true
 docker_install_compose_from_source: false
-docker_install_compose_from_pip: True
-docker_compose_version: "1.29.2"
+docker_install_compose_from_pip: false
+docker_compose_version: "v2.11.1"
 docker_compose_arch: "{{ ansible_architecture }}"
 docker_compose_url: "https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-linux-{{ docker_compose_arch }}"
 docker_compose_path: /usr/local/bin/docker-compose
@@ -90,6 +90,8 @@ docker_daemon_syslog:
 docker_additional_networks: []
   #- name: prometheus_network
   #  bridge_name: prom_bridge  # this one has to be less than 15 symbols
+  #  driver: "bridge"
+  #  attachable: false
   #  subnet: 10.10.10.0/24
   #  gateway: 10.10.10.1
   #  iprange: 10.10.10.128/25
